@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./antd-theme/antd-customized.css"
+import { BrowserRouter } from "react-router-dom";
+import { Button, Layout } from "antd";
+
+// Do not import. Just get from Layout
+const { Content, Footer, Header, Sider } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Header style={{backgroundColor: "#5DAA68", color: "#FAF1CF"}}>Header</Header>
+        <Layout>
+          <Sider style={{backgroundColor: "white"}}>Sider</Sider>
+          <Content><Button type="primary">Primary Button</Button></Content>
+        </Layout>
+        <Footer>Footer</Footer>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
