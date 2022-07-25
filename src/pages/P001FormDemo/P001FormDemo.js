@@ -32,6 +32,7 @@ const P001FormDemo = (props) => {
                     whitespace: true,
                     message: "Not allow whitespace.",
                   },
+                  // A Function returning RuleConfig Object
                   // Spread Operator to get inside getFieldValue of FormInstance
                   ({ getFieldValue }) => ({
                     // Return RuleConfig as validator function
@@ -45,6 +46,7 @@ const P001FormDemo = (props) => {
                       return Promise.resolve();
                     },
                   }),
+                  // RuleConfig Object
                   {
                     validator: (_, value) => {
                       if (value.includes("b")) {
