@@ -1,10 +1,11 @@
 import "./antd-theme/antd-customized.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Button, Col, Layout, Row } from "antd";
+import { Col, Layout, Row } from "antd";
 import P001FormDemo from "./pages/P001FormDemo/P001FormDemo";
+import P002Spin from "./pages/P002Spin/P002Spin";
 
 // Do not import. Just get from Layout
-const { Content, Footer, Header, Sider } = Layout;
+const { Content, Header } = Layout;
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
             <Row justify="center">
               <Col span="18">
                 <Switch>
-                  <Route path={"/"} exact>
+                  <Route path={"/p001"} exact>
                     <P001FormDemo />
+                  </Route>
+
+                  <Route path={"/p002"} exact>
+                    <P002Spin />
                   </Route>
                 </Switch>
               </Col>
