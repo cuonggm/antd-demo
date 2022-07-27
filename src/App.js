@@ -1,13 +1,11 @@
 import "./antd-theme/antd-customized.css";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import { Col, Layout, Row } from "antd";
-import P001FormDemo from "./pages/P001FormDemo/P001FormDemo";
-import P002Spin from "./pages/P002Spin/P002Spin";
-import SiderContent from "./components/SiderContent/SiderContent";
+import { Layout } from "antd";
 import { ChromeOutlined } from "@ant-design/icons";
+import Login from "./pages/Login/Login";
 
 // Do not import. Just get from Layout
-const { Content, Header, Sider, Footer } = Layout;
+const { Content, Header, Footer } = Layout;
 
 function App() {
   return (
@@ -20,14 +18,13 @@ function App() {
           </Link>
         </Header>
         <Layout>
-          <Sider
+          {/* <Sider
             style={{
               backgroundColor: "white",
             }}
           >
             <SiderContent />
-          </Sider>
-
+          </Sider> */}
           <Content
             style={{
               paddingLeft: "12px",
@@ -37,19 +34,11 @@ function App() {
               backgroundColor: "white",
             }}
           >
-            <Row justify="center">
-              <Col span="24">
-                <Switch>
-                  <Route path={"/p001"} exact>
-                    <P001FormDemo />
-                  </Route>
-
-                  <Route path={"/p002"} exact>
-                    <P002Spin />
-                  </Route>
-                </Switch>
-              </Col>
-            </Row>
+            <Switch>
+              <Route path="/login">
+                <Login />
+              </Route>
+            </Switch>
           </Content>
         </Layout>
         <Footer style={{ textAlign: "center" }}>staging.cuonggm.com</Footer>
