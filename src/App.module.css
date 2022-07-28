@@ -1,0 +1,12 @@
+.headerItem {
+  background-color: orange;
+  color: white;
+  height: 70px;
+  width: 80px;
+  text-align: center;
+  float: right;
+}
+
+.headerItem:hover {
+  color: #5daa68;
+}
